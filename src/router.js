@@ -18,6 +18,21 @@ export default new Router({
       component: ()=>import('./views/MapState.vue')
     },
     {
+      path: "/mapactions",
+      name: "mapactions",
+      component: ()=>import('./views/MapActions.vue')
+    },
+    {
+      path: "/mapmutations",
+      name: "mapmutations",
+      component: ()=>import('./views/MapMutations.vue')
+    },
+    {
+      path: "/getuser",
+      name: "getuser",
+      component: ()=>import('./views/GetUser.vue')
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting
