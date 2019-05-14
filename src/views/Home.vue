@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import {mapState,mapGetters,mapActions} from 'vuex'
 export default {
   name: "home",
   methods:{

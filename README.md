@@ -78,15 +78,21 @@
   组件使用
   import {mapSate} from 'vuex'
   放在computed属性里面  .../mapState(可以使对象可以是数组)
+  对象的时候需要用箭头函数返回响应的state值
+  ...mapState(['username'])
+  //this
   2.mapGetters 映射getters的属性到this的data上面
   import {mapGetters} from 'vuex'
   放在computed属性里面  .../mapFetters(可以使对象可以是数组)
   对象的时候只是起到改名的作用
+  ...mapGetters(['number'])
+  this.number = this.$store.getters.number
   3.mapActions  映射actions 到this的methods对象上 会把actions的方法作为this上的方法 
   methods里面定义的方法怎么调用mapActions 拿回来的方法就可以怎么调用
   ```
   methods:{
    ...mapActions(['ActionsAdd'])
+   this.ActionsAdd = this.$store.dispatch('ActionsAdd')
    我们可以当做 等价于下面的写法
     ActionsAdd(){
 
@@ -96,11 +102,22 @@
   import {mapActions} from 'vuex'
   用的时候放到methods
   4.mapMatutions  把mutations的方法映射到this的methods上面 可以通过this[mutatios上定义的函数]来调用对应的方法
-  import {mapMutations} from 'vuex
+  import {mapMutations} from 'vuex'
+  ...mapMutations('addcount')
+  this.addcount = this.$store.commit('addcount')
   用的时候放在methods上面 
   5.辅助函数总结
   跟数据相关的都放computed里面
   mapState mapGetters
   跟方法相关的都放 methods里面
   maoActions mapMutations 
-  
+
+
+
+##vuex拆分
+所有需要引入的都在index.js 引入
+流程 1.导出(export default)-->2.引入(import .. from ...)-->3.在store对象上挂载 栗子:{actions:actions}简化成{actions}
+
+使用常量
+
+作业: 把之前写过的都放在拆分的里面去

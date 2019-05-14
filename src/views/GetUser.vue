@@ -5,14 +5,16 @@
     </div>
 </template>
 <script>
-import {mapState} from 'vuex'
+import {mapState, mapActions} from 'vuex'
 export default {
     computed:{
         ...mapState(['username'])
     },
     methods:{
+        ...mapActions(['getname']),
         getuser(){
-            this.$store.dispatch('getname')
+            this.getname()
+            // this.$store.dispatch('getname')
         }
     }
 }

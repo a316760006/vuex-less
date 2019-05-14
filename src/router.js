@@ -18,6 +18,11 @@ export default new Router({
       component: ()=>import('./views/MapState.vue')
     },
     {
+      path: "/vuesplit",
+      name: "vuesplit",
+      component: ()=>import('./views/VueSplit.vue')
+    },
+    {
       path: "/mapactions",
       name: "mapactions",
       component: ()=>import('./views/MapActions.vue')
