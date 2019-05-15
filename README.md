@@ -121,3 +121,16 @@
 使用常量
 
 作业: 把之前写过的都放在拆分的里面去
+
+
+###moudle 子模块
+    moudels:{user}
+    state 取值
+    this.$store.state.user.name
+    ...mapState
+    如果文件里只是用vue模块, 用
+      import {createNamespacedHelpers} from 'vuex'
+      const {mapState,mapGetters,mapActions} = createNamespacedHelpers('user')
+    如果也有全局的用 任何情况都可以使用下面这种方式
+    ...mapState([])
+    ...mapState('模块名',['state里面的变量'])

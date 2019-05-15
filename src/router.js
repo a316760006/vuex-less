@@ -28,6 +28,16 @@ export default new Router({
       component: ()=>import('./views/MapActions.vue')
     },
     {
+      path: "/car",
+      name: "car",
+      component: ()=>import('./views/Car.vue')
+    },
+    {
+      path: "/list",
+      name: "list",
+      component: ()=>import('./views/List.vue')
+    },
+    {
       path: "/mapmutations",
       name: "mapmutations",
       component: ()=>import('./views/MapMutations.vue')
