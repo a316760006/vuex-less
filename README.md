@@ -118,7 +118,7 @@ import {mapMutations} from 'vuex'
 
 用的时候放在methods上面  
 5. 辅助函数总结
-跟数据相关的都放computed里面 mapState mapGetters 
+跟数据相关的都放 computed里面 mapState mapGetters 
 跟方法相关的都放 methods里面 
 mapActions mapMutations  
  
@@ -146,9 +146,14 @@ const {mapState,mapGetters,mapActions} = createNamespacedHelpers('user')
 ...mapState([])
 ...mapState('模块名',['state里面的变量'])
 
+###插件
+plugins:[] 插件的集合
+官方提供的logger插件  只做调试用
+vuex表单处理 https://vuex.vuejs.org/zh/guide/forms.html
 
+package.json   放脚本 放依赖文件
 
-
-
+// 项目安排 
+// element 
 
 
